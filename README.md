@@ -1,10 +1,10 @@
 
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration & Login</title>
     <link rel="stylesheet" href="styles.css">
-
+</head>
+<body>
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -16,11 +16,11 @@
 .container {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: flex;  
     align-items: center;
-    background-size: cover;
+    justify-content: center;
     background-position: center;
+    background-size: cover;
     background-color: #1a1a1a;
 }
 
@@ -40,9 +40,27 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    color: #3498db;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
     </style>
-    <div class="container" style="background-image: url('path_to_your_background_image.jpg')">
+    <div class="container" style="background-image: url('pngtree-cyber-security-data-dark-blue-light-effect-abstract-background-image_771333.jpg')">
         <!-- Registration Form -->
         <form id="registration-form">
             <h2>Register Your Id</h2>
@@ -56,10 +74,10 @@ input {
             <h2>Conform Login</h2>
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
-            <button type="button" onclick="login()">Login</button>
+           <center><button type="button" onclick="login()">Login</button>
         </form>
     </div>
-   
+
     <script>
         // Mock database (replace with real database in real-world applications)
 let users = {};
