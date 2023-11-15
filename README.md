@@ -61,7 +61,7 @@ button:hover {
     color: #fff;
 }
     </style>
-    <div class="container" style="background-image: url('pngtree-cyber-security-data-dark-blue-light-effect-abstract-background-image_771333.jpg')">
+    <div class="container" style="background-image: url('bg psw.jpg')">
         <!-- Registration Form -->
         <form id="registration-form">
             <h2>Register Your Id</h2>
@@ -76,8 +76,7 @@ button:hover {
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
            <center><button type="button" onclick="login()">Login</button>
-        </form>
-    </div>
+      
 
     <script>
         // Mock database (replace with real database in real-world applications)
