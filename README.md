@@ -78,7 +78,7 @@ p{
         
         <!-- Login Form -->
         <form id="login-form" style="display: none;">
-            <h2>Conform Login</h2>
+            <h2confirm Login</h2>
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
            <center><button type="button" onclick="login()">Login</button>
