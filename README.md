@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration & Login</title>
-   
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <style>
@@ -60,14 +60,20 @@ button:hover {
     background-color: #3498db;
     color: #fff;
 }
+p{
+    color: red;
+    font-size: 10px;
+}
     </style>
-    <div class="container" style="background-image: url('bg psw.jpg')">
+    <div class="container" style="background-image: url('pngtree-cyber-security-data-dark-blue-light-effect-abstract-background-image_771333.jpg')">
         <!-- Registration Form -->
         <form id="registration-form">
             <h2>Register Your Id</h2>
             <input type="text" id="register-username" placeholder="Username" required>
             <input type="password" id="register-password" placeholder="Password" required>
+            <p>0-9 Any Number In 8 Digits Password</p>
             <button type="button" onclick="register()">Register</button>
+
         </form>
         
         <!-- Login Form -->
@@ -76,28 +82,41 @@ button:hover {
             <input type="text" id="login-username" placeholder="Username" required>
             <input type="password" id="login-password" placeholder="Password" required>
            <center><button type="button" onclick="login()">Login</button>
-      
+     
 
     <script>
-        // Mock database (replace with real database in real-world applications)
+     // Mock database (replace with real database in real-world applications)
 let users = {};
 
 function register() {
     let username = document.getElementById('register-username').value;
     let password = document.getElementById('register-password').value;
 
+    // Check if the user already exists
     if (users[username]) {
         alert('User already exists!');
     } else {
-        users[username] = password;
-        alert('Registration successful!');
-        
-        // Switch to login form
-        document.getElementById('registration-form').style.display = 'none';
-        document.getElementById('login-form').style.display = 'block';
+        // Check if the password is strong
+        if (isStrongPassword(password)) {
+            users[username] = password;
+            alert('Registration successful!');
+            
+            // Switch to login form
+            document.getElementById('registration-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        } else {
+            alert('Please enter a strong password.');
+        }
     }
 }
 
+function isStrongPassword(password) {
+    var regex = /^[0-9@$!%*?&]{8}$/;
+
+
+    // Test the password against the regex
+    return regex.test(password);
+}
 function login() {
     let username = document.getElementById('login-username').value;
     let password = document.getElementById('login-password').value;
