@@ -65,7 +65,7 @@ p{
     font-size: 10px;
 }
     </style>
-    <div class="container" style="background-image: url('bg psw.jpg')">
+    <div class="container" style="background-image: url('crew-data-center-cyber-security-team-computer-engineers-working-double-exposure-blurry-interface-concept-protection-164673298.webp')">
         <!-- Registration Form -->
         <form id="registration-form">
             <h2>Register Your Id</h2>
