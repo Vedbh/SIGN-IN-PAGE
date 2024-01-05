@@ -1,131 +1,114 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration & Login</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your E-commerce Website</title>
 </head>
 <body>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-}
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-size: cover;
-    background-color: #1a1a1a;
-}
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Your Brand</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-form {
-    width: 250px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    background-color: silver;
-}
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container">
+      <h1>Welcome to Your E-commerce Store</h1>
+      <p>Discover amazing products and shop with ease.</p>
+      <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </div>
 
-input {
-    width: 100%;
-    padding: 05px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 2px solid #3498db;
-    color: #3498db;
-    background-color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+  <!-- Product Section -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="product1.jpg" class="card-img-top" alt="Product 1">
+          <div class="card-body">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text">Description of Product 1.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
 
-button:hover {
-    background-color: #3498db;
-    color: #fff;
-}
-p{
-    color: red;
-    font-size: 10px;
-}
-    </style>
-    <div class="container" style="background-image: url('crew-data-center-cyber-security-team-computer-engineers-working-double-exposure-blurry-interface-concept-protection-164673298.webp')">
-        <!-- Registration Form -->
-        <form id="registration-form">
-            <h2>Register Your Id</h2>
-            <input type="text" id="register-username" placeholder="Username" required>
-            <input type="password" id="register-password" placeholder="Password" required>
-            <p>0-9 Any Number In 8 Digits Password</p>
-            <button type="button" onclick="register()">Register</button>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="product2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text">Description of Product 2.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+ <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="product2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text">Description of Product 2.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+       <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="product2.jpg" class="card-img-top" alt="Product 2">
+          <div class="card-body">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text">Description of Product 2.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="product3.jpg" class="card-img-top" alt="Product 3">
+          <div class="card-body">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text">Description of Product 3.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        </form>
-        
-        <!-- Login Form -->
-        <form id="login-form" style="display: none;">
-            <h2>confirm Login</h2>
-            <input type="text" id="login-username" placeholder="Username" required>
-            <input type="password" id="login-password" placeholder="Password" required>
-           <center><button type="button" onclick="login()">Login</button>
-     
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Your E-commerce Store</p>
+  </footer>
 
-    <script>
-     // Mock database (replace with real database in real-world applications)
-let users = {};
-
-function register() {
-    let username = document.getElementById('register-username').value;
-    let password = document.getElementById('register-password').value;
-
-    // Check if the user already exists
-    if (users[username]) {
-        alert('User already exists!');
-    } else {
-        // Check if the password is strong
-        if (isStrongPassword(password)) {
-            users[username] = password;
-            alert('Registration successful!');
-            
-            // Switch to login form
-            document.getElementById('registration-form').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
-        } else {
-            alert('Please enter a strong password.');
-        }
-    }
-}
-
-function isStrongPassword(password) {
-    var regex = /^[0-9@$!%*?&]{8}$/;
-
-
-    // Test the password against the regex
-    return regex.test(password);
-}
-function login() {
-    let username = document.getElementById('login-username').value;
-    let password = document.getElementById('login-password').value;
-
-    if (users[username] && users[username] === password) {
-        window.location.href = 'welcome.html'; // Redirect to second page
-    } else {
-        alert('Invalid credentials or user not found!');
-    }
-}
-
-    </script>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
