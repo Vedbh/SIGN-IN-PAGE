@@ -130,8 +130,13 @@
         #slide-to-stop:hover {
             background: linear-gradient(135deg, #ff007f, #00d2ff);
         }
+           #clock {
+            font-weight: bold;
+            padding-right: 20px; /* Optional: Adds some padding from the right edge */
+            size:20px;
+        }
         h1{
-        display:none;
+            display:none;
         }
     </style>
 </head>
@@ -161,7 +166,9 @@
             <div id="slide-to-stop" style="display: none;">Click to Stop</div>
         </div>
     </div>
-    
+     <div id="clock">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span> <span id="ampm">AM</span>
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -277,4 +284,26 @@
         document.getElementById('resume').disabled = true;
         document.getElementById('reset').disabled = true;
     });
+     function updateTime() {
+            const now = new Date();
+            let hour = now.getHours();
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+            const ampm = hour >= 12 ? 'PM' : 'AM';
+
+            // Convert 24-hour time to 12-hour time
+            hour = hour % 12;
+            hour = hour ? hour : 12; // the hour '0' should be '12'
+
+            document.getElementById('hour').textContent = String(hour).padStart(2, '0');
+            document.getElementById('minute').textContent = String(minute).padStart(2, '0');
+            document.getElementById('second').textContent = String(second).padStart(2, '0');
+            document.getElementById('ampm').textContent = ampm;
+        }
+
+        // Update the time every second
+        setInterval(updateTime, 1000);
+
+        // Initial call to display time immediately
+        updateTime();
 </script>
